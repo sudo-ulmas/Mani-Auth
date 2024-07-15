@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ManiAuth",
-            targets: ["ManiAuth", "Flutter", "App", "FlutterPluginRegistrant", "MyId", "PathProvider", "SmartAuth", "ObjC"]),
+            targets: ["ManiAuth", "Flutter", "App", "FlutterPluginRegistrant", "MyId", "PathProvider", "ObjC"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,7 +24,6 @@ let package = Package(
         .binaryTarget(name: "FlutterPluginRegistrant", path: "./Sources/FlutterPluginRegistrant.xcframework"),
         .binaryTarget(name: "MyId", path: "./Sources/myid.xcframework"),
         .binaryTarget(name: "PathProvider", path: "./Sources/path_provider_foundation.xcframework"),
-        .binaryTarget(name: "SmartAuth", path: "./Sources/smart_auth.xcframework"),
 
     ]
 )

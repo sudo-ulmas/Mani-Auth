@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		85g2imerBshjsmaoiC+MNXFJRS0=
+		kFz3/Mn5gt5F4apbznJWEqN6GdE=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		fekahydGGj/NJ1+lzO93Eh2rnB8=
+		olykMDGlE0gTEwz9tI/y5uKMq4Y=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,15 +22,23 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		WSXA8ztmJ0afiLIOqtZa6IfEXnc=
+		qyGYRlYrdmk1AsevUTAtC0ii32s=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
-		C2Cn7STaPQO8OTgbqGwX0L9fDqc=
+		/CUoTuPQqqdexfyOT9lpJhV+2MQ=
+		</data>
+		<key>flutter_assets/isolate_snapshot_data</key>
+		<data>
+		lKuH9ddHfuQ0gay79iWXgmH3gCo=
+		</data>
+		<key>flutter_assets/kernel_blob.bin</key>
+		<data>
+		guBL35PG61XbBNm6piIaNZ3hTf4=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
-		nGyG9XhPBCnIdyJQ8yDR05GCbOk=
+		Bvk+P1ykE1PGRdktwgwDyz6AOqM=
 		</data>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/arrow_left.svg</key>
 		<data>
@@ -114,11 +122,15 @@
 		</data>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/logo.svg</key>
 		<data>
-		qbTVVCgX6QZyzqBap7BWqnqA1AY=
+		Sg3peF40TIejwKsIYUSrYP/Tj/k=
 		</data>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/notifications.svg</key>
 		<data>
 		8e8dul4aGThXu9rW8EefgcehvKQ=
+		</data>
+		<key>flutter_assets/packages/mani_uikit/assets/icons/paid_invoice.svg</key>
+		<data>
+		a4DrfdiHg+l5z6QGha1dBpNBAe4=
 		</data>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/person.svg</key>
 		<data>
@@ -236,6 +248,10 @@
 		<data>
 		p79zzJ85/yOQo5OGiBW5XF0+CxY=
 		</data>
+		<key>flutter_assets/vm_snapshot_data</key>
+		<data>
+		5pZuXudFN+/X6GBnZRBE8DbuhuQ=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -243,14 +259,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4m3prVfZv/A1m0hjXIUz2Z2MPlbTWP48HeCUemwZrG0=
+			660scKzwNzIIyPA+Dm1reXXXaBJQ8nZk7Oiyi05WH/8=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PQcuS+UkLZT3Gp9/K6/gQ5Qse4PjmGwTRApPzIYdQ8A=
+			3nNJkqk0l+GlE+zzL2rWPmQ4MveR0ABdqtmGj1udmE0=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -264,21 +280,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ri6iz1ICcdyIY/jpC+Hp/n7JFLrLZy8nJIDKLI4JBA=
+			fSsOnxMJ9GxQVGMkwG5kKQyzvIG7VI1ofInGlAK5WYs=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7bJB9OLWK+OxUfFbCY4biDVDIXHtaWAqOEF9+r58FS8=
+			2YZbZxoJ1oPROoYwidiCXg9ho3aWzl19RIvIAjqmJFM=
+			</data>
+		</dict>
+		<key>flutter_assets/isolate_snapshot_data</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0HgzM7ffFWRkpC0Cac4XAGW8JBmGpYBYFYO5Oqv45xU=
+			</data>
+		</dict>
+		<key>flutter_assets/kernel_blob.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JHnXRrqv/B3e//oHQ5307ficAITD9fJ98d1aRKuOejM=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UdJTRTceYI7NReOhSrI5tL5lDpARFJIBpbGMQE0kado=
+			Z8RP6Rg7AC553ef2l34piGYcmj5KPF/OloeH79vtgjw=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/arrow_left.svg</key>
@@ -425,7 +455,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zYDRpBdOGGV2x/jqnIrtAPxqGnoqGWpMD+tpbz1+Mkw=
+			5GEhEStZMa0zFQUt8bdo6ffQ2obLTS8DW2LSkl8sA/s=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/notifications.svg</key>
@@ -433,6 +463,13 @@
 			<key>hash2</key>
 			<data>
 			21Cl4yqvH4X2KH/t+ZsnSas4X8SzFXvhYUmeJQY6ArU=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/mani_uikit/assets/icons/paid_invoice.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U65Nv/ZEwwK6cCYjxc7X1xkQuzzhzElOZT1hpzdGmwE=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/mani_uikit/assets/icons/person.svg</key>
@@ -636,6 +673,13 @@
 			<key>hash2</key>
 			<data>
 			ggsttSoN6c2kH04/7vNnFwBQTTy8j9ILVF4lU1822Bk=
+			</data>
+		</dict>
+		<key>flutter_assets/vm_snapshot_data</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OKT7zSYjvmy6bkUt/xrnwXxv1rygk4kGDCZd1F+nKug=
 			</data>
 		</dict>
 	</dict>
