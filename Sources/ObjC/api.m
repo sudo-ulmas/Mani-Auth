@@ -31,34 +31,34 @@ static id GetNullableObjectAtIndex(NSArray<id> *array, NSInteger key) {
   return (result == [NSNull null]) ? nil : result;
 }
 
-@interface --java_outToken ()
-+ (--java_outToken *)fromList:(NSArray<id> *)list;
-+ (nullable --java_outToken *)nullableFromList:(NSArray<id> *)list;
+@interface Token ()
++ (Token *)fromList:(NSArray<id> *)list;
++ (nullable Token *)nullableFromList:(NSArray<id> *)list;
 - (NSArray<id> *)toList;
 @end
 
-@interface --java_outHostInfo ()
-+ (--java_outHostInfo *)fromList:(NSArray<id> *)list;
-+ (nullable --java_outHostInfo *)nullableFromList:(NSArray<id> *)list;
+@interface HostInfo ()
++ (HostInfo *)fromList:(NSArray<id> *)list;
++ (nullable HostInfo *)nullableFromList:(NSArray<id> *)list;
 - (NSArray<id> *)toList;
 @end
 
-@implementation --java_outToken
+@implementation Token
 + (instancetype)makeWithAccessToken:(nullable NSString *)accessToken
     refreshToken:(nullable NSString *)refreshToken {
-  --java_outToken* pigeonResult = [[--java_outToken alloc] init];
+  Token* pigeonResult = [[Token alloc] init];
   pigeonResult.accessToken = accessToken;
   pigeonResult.refreshToken = refreshToken;
   return pigeonResult;
 }
-+ (--java_outToken *)fromList:(NSArray<id> *)list {
-  --java_outToken *pigeonResult = [[--java_outToken alloc] init];
++ (Token *)fromList:(NSArray<id> *)list {
+  Token *pigeonResult = [[Token alloc] init];
   pigeonResult.accessToken = GetNullableObjectAtIndex(list, 0);
   pigeonResult.refreshToken = GetNullableObjectAtIndex(list, 1);
   return pigeonResult;
 }
-+ (nullable --java_outToken *)nullableFromList:(NSArray<id> *)list {
-  return (list) ? [--java_outToken fromList:list] : nil;
++ (nullable Token *)nullableFromList:(NSArray<id> *)list {
+  return (list) ? [Token fromList:list] : nil;
 }
 - (NSArray<id> *)toList {
   return @[
@@ -68,22 +68,22 @@ static id GetNullableObjectAtIndex(NSArray<id> *array, NSInteger key) {
 }
 @end
 
-@implementation --java_outHostInfo
+@implementation HostInfo
 + (instancetype)makeWithAppName:(nullable NSString *)appName
     locale:(nullable NSString *)locale {
-  --java_outHostInfo* pigeonResult = [[--java_outHostInfo alloc] init];
+  HostInfo* pigeonResult = [[HostInfo alloc] init];
   pigeonResult.appName = appName;
   pigeonResult.locale = locale;
   return pigeonResult;
 }
-+ (--java_outHostInfo *)fromList:(NSArray<id> *)list {
-  --java_outHostInfo *pigeonResult = [[--java_outHostInfo alloc] init];
++ (HostInfo *)fromList:(NSArray<id> *)list {
+  HostInfo *pigeonResult = [[HostInfo alloc] init];
   pigeonResult.appName = GetNullableObjectAtIndex(list, 0);
   pigeonResult.locale = GetNullableObjectAtIndex(list, 1);
   return pigeonResult;
 }
-+ (nullable --java_outHostInfo *)nullableFromList:(NSArray<id> *)list {
-  return (list) ? [--java_outHostInfo fromList:list] : nil;
++ (nullable HostInfo *)nullableFromList:(NSArray<id> *)list {
+  return (list) ? [HostInfo fromList:list] : nil;
 }
 - (NSArray<id> *)toList {
   return @[
@@ -93,29 +93,29 @@ static id GetNullableObjectAtIndex(NSArray<id> *array, NSInteger key) {
 }
 @end
 
-@interface --java_outApiPigeonCodecReader : FlutterStandardReader
+@interface nullApiPigeonCodecReader : FlutterStandardReader
 @end
-@implementation --java_outApiPigeonCodecReader
+@implementation nullApiPigeonCodecReader
 - (nullable id)readValueOfType:(UInt8)type {
   switch (type) {
     case 129: 
-      return [--java_outToken fromList:[self readValue]];
+      return [Token fromList:[self readValue]];
     case 130: 
-      return [--java_outHostInfo fromList:[self readValue]];
+      return [HostInfo fromList:[self readValue]];
     default:
       return [super readValueOfType:type];
   }
 }
 @end
 
-@interface --java_outApiPigeonCodecWriter : FlutterStandardWriter
+@interface nullApiPigeonCodecWriter : FlutterStandardWriter
 @end
-@implementation --java_outApiPigeonCodecWriter
+@implementation nullApiPigeonCodecWriter
 - (void)writeValue:(id)value {
-  if ([value isKindOfClass:[--java_outToken class]]) {
+  if ([value isKindOfClass:[Token class]]) {
     [self writeByte:129];
     [self writeValue:[value toList]];
-  } else if ([value isKindOfClass:[--java_outHostInfo class]]) {
+  } else if ([value isKindOfClass:[HostInfo class]]) {
     [self writeByte:130];
     [self writeValue:[value toList]];
   } else {
@@ -124,32 +124,32 @@ static id GetNullableObjectAtIndex(NSArray<id> *array, NSInteger key) {
 }
 @end
 
-@interface --java_outApiPigeonCodecReaderWriter : FlutterStandardReaderWriter
+@interface nullApiPigeonCodecReaderWriter : FlutterStandardReaderWriter
 @end
-@implementation --java_outApiPigeonCodecReaderWriter
+@implementation nullApiPigeonCodecReaderWriter
 - (FlutterStandardWriter *)writerWithData:(NSMutableData *)data {
-  return [[--java_outApiPigeonCodecWriter alloc] initWithData:data];
+  return [[nullApiPigeonCodecWriter alloc] initWithData:data];
 }
 - (FlutterStandardReader *)readerWithData:(NSData *)data {
-  return [[--java_outApiPigeonCodecReader alloc] initWithData:data];
+  return [[nullApiPigeonCodecReader alloc] initWithData:data];
 }
 @end
 
-NSObject<FlutterMessageCodec> *--java_outGetApiCodec(void) {
+NSObject<FlutterMessageCodec> *nullGetApiCodec(void) {
   static FlutterStandardMessageCodec *sSharedObject = nil;
   static dispatch_once_t sPred = 0;
   dispatch_once(&sPred, ^{
-    --java_outApiPigeonCodecReaderWriter *readerWriter = [[--java_outApiPigeonCodecReaderWriter alloc] init];
+    nullApiPigeonCodecReaderWriter *readerWriter = [[nullApiPigeonCodecReaderWriter alloc] init];
     sSharedObject = [FlutterStandardMessageCodec codecWithReaderWriter:readerWriter];
   });
   return sSharedObject;
 }
-@interface --java_outManiAuthApi ()
+@interface ManiAuthApi ()
 @property(nonatomic, strong) NSObject<FlutterBinaryMessenger> *binaryMessenger;
 @property(nonatomic, strong) NSString *messageChannelSuffix;
 @end
 
-@implementation --java_outManiAuthApi
+@implementation ManiAuthApi
 
 - (instancetype)initWithBinaryMessenger:(NSObject<FlutterBinaryMessenger> *)binaryMessenger {
   return [self initWithBinaryMessenger:binaryMessenger messageChannelSuffix:@""];
@@ -162,13 +162,13 @@ NSObject<FlutterMessageCodec> *--java_outGetApiCodec(void) {
   }
   return self;
 }
-- (void)sendHostInfoHostInfo:(--java_outHostInfo *)arg_hostInfo completion:(void (^)(FlutterError *_Nullable))completion {
+- (void)sendHostInfoHostInfo:(HostInfo *)arg_hostInfo completion:(void (^)(FlutterError *_Nullable))completion {
   NSString *channelName = [NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.ManiAuthApi.sendHostInfo", _messageChannelSuffix];
   FlutterBasicMessageChannel *channel =
     [FlutterBasicMessageChannel
       messageChannelWithName:channelName
       binaryMessenger:self.binaryMessenger
-      codec:--java_outGetApiCodec()];
+      codec:nullGetApiCodec()];
   [channel sendMessage:@[arg_hostInfo ?: [NSNull null]] reply:^(NSArray<id> *reply) {
     if (reply != nil) {
       if (reply.count > 1) {
@@ -183,20 +183,20 @@ NSObject<FlutterMessageCodec> *--java_outGetApiCodec(void) {
 }
 @end
 
-void SetUp--java_outHostAppApi(id<FlutterBinaryMessenger> binaryMessenger, NSObject<--java_outHostAppApi> *api) {
-  SetUp--java_outHostAppApiWithSuffix(binaryMessenger, api, @"");
+void SetUpHostAppApi(id<FlutterBinaryMessenger> binaryMessenger, NSObject<HostAppApi> *api) {
+  SetUpHostAppApiWithSuffix(binaryMessenger, api, @"");
 }
 
-void SetUp--java_outHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessenger, NSObject<--java_outHostAppApi> *api, NSString *messageChannelSuffix) {
+void SetUpHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessenger, NSObject<HostAppApi> *api, NSString *messageChannelSuffix) {
   messageChannelSuffix = messageChannelSuffix.length > 0 ? [NSString stringWithFormat: @".%@", messageChannelSuffix] : @"";
   {
     FlutterBasicMessageChannel *channel =
       [[FlutterBasicMessageChannel alloc]
         initWithName:[NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.HostAppApi.cancel", messageChannelSuffix]
         binaryMessenger:binaryMessenger
-        codec:--java_outGetApiCodec()];
+        codec:nullGetApiCodec()];
     if (api) {
-      NSCAssert([api respondsToSelector:@selector(cancelWithError:)], @"--java_outHostAppApi api (%@) doesn't respond to @selector(cancelWithError:)", api);
+      NSCAssert([api respondsToSelector:@selector(cancelWithError:)], @"HostAppApi api (%@) doesn't respond to @selector(cancelWithError:)", api);
       [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
         FlutterError *error;
         [api cancelWithError:&error];
@@ -211,12 +211,12 @@ void SetUp--java_outHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessen
       [[FlutterBasicMessageChannel alloc]
         initWithName:[NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.HostAppApi.finishAuthWithToken", messageChannelSuffix]
         binaryMessenger:binaryMessenger
-        codec:--java_outGetApiCodec()];
+        codec:nullGetApiCodec()];
     if (api) {
-      NSCAssert([api respondsToSelector:@selector(finishAuthWithTokenToken:error:)], @"--java_outHostAppApi api (%@) doesn't respond to @selector(finishAuthWithTokenToken:error:)", api);
+      NSCAssert([api respondsToSelector:@selector(finishAuthWithTokenToken:error:)], @"HostAppApi api (%@) doesn't respond to @selector(finishAuthWithTokenToken:error:)", api);
       [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
         NSArray<id> *args = message;
-        --java_outToken *arg_token = GetNullableObjectAtIndex(args, 0);
+        Token *arg_token = GetNullableObjectAtIndex(args, 0);
         FlutterError *error;
         [api finishAuthWithTokenToken:arg_token error:&error];
         callback(wrapResult(nil, error));

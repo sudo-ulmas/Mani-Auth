@@ -10,17 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class --java_outToken;
-@class --java_outHostInfo;
+@class Token;
+@class HostInfo;
 
-@interface --java_outToken : NSObject
+@interface Token : NSObject
 + (instancetype)makeWithAccessToken:(nullable NSString *)accessToken
     refreshToken:(nullable NSString *)refreshToken;
 @property(nonatomic, copy, nullable) NSString * accessToken;
 @property(nonatomic, copy, nullable) NSString * refreshToken;
 @end
 
-@interface --java_outHostInfo : NSObject
+@interface HostInfo : NSObject
 + (instancetype)makeWithAppName:(nullable NSString *)appName
     locale:(nullable NSString *)locale;
 @property(nonatomic, copy, nullable) NSString * appName;
@@ -28,22 +28,22 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /// The codec used by all APIs.
-NSObject<FlutterMessageCodec> *--java_outGetApiCodec(void);
+NSObject<FlutterMessageCodec> *nullGetApiCodec(void);
 
-@interface --java_outManiAuthApi : NSObject
+@interface ManiAuthApi : NSObject
 - (instancetype)initWithBinaryMessenger:(id<FlutterBinaryMessenger>)binaryMessenger;
 - (instancetype)initWithBinaryMessenger:(id<FlutterBinaryMessenger>)binaryMessenger messageChannelSuffix:(nullable NSString *)messageChannelSuffix;
-- (void)sendHostInfoHostInfo:(--java_outHostInfo *)hostInfo completion:(void (^)(FlutterError *_Nullable))completion;
+- (void)sendHostInfoHostInfo:(HostInfo *)hostInfo completion:(void (^)(FlutterError *_Nullable))completion;
 @end
 
 
-@protocol --java_outHostAppApi
+@protocol HostAppApi
 - (void)cancelWithError:(FlutterError *_Nullable *_Nonnull)error;
-- (void)finishAuthWithTokenToken:(--java_outToken *)token error:(FlutterError *_Nullable *_Nonnull)error;
+- (void)finishAuthWithTokenToken:(Token *)token error:(FlutterError *_Nullable *_Nonnull)error;
 @end
 
-extern void SetUp--java_outHostAppApi(id<FlutterBinaryMessenger> binaryMessenger, NSObject<--java_outHostAppApi> *_Nullable api);
+extern void SetUpHostAppApi(id<FlutterBinaryMessenger> binaryMessenger, NSObject<HostAppApi> *_Nullable api);
 
-extern void SetUp--java_outHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessenger, NSObject<--java_outHostAppApi> *_Nullable api, NSString *messageChannelSuffix);
+extern void SetUpHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessenger, NSObject<HostAppApi> *_Nullable api, NSString *messageChannelSuffix);
 
 NS_ASSUME_NONNULL_END
