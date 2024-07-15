@@ -33,13 +33,13 @@ NSObject<FlutterMessageCodec> *nullGetApiCodec(void);
 @interface ManiAuthApi : NSObject
 - (instancetype)initWithBinaryMessenger:(id<FlutterBinaryMessenger>)binaryMessenger;
 - (instancetype)initWithBinaryMessenger:(id<FlutterBinaryMessenger>)binaryMessenger messageChannelSuffix:(nullable NSString *)messageChannelSuffix;
-- (void)sendHostInfoHostInfo:(HostInfo *)hostInfo completion:(void (^)(FlutterError *_Nullable))completion;
+- (void)sendHostInfo:(HostInfo *)hostInfo completion:(void (^)(FlutterError *_Nullable))completion;
 @end
 
 
 @protocol HostAppApi
 - (void)cancelWithError:(FlutterError *_Nullable *_Nonnull)error;
-- (void)finishAuthWithTokenToken:(Token *)token error:(FlutterError *_Nullable *_Nonnull)error;
+- (void)authSuccessToken:(Token *)token error:(FlutterError *_Nullable *_Nonnull)error;
 @end
 
 extern void SetUpHostAppApi(id<FlutterBinaryMessenger> binaryMessenger, NSObject<HostAppApi> *_Nullable api);

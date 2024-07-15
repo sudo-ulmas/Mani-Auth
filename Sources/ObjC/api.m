@@ -162,8 +162,8 @@ NSObject<FlutterMessageCodec> *nullGetApiCodec(void) {
   }
   return self;
 }
-- (void)sendHostInfoHostInfo:(HostInfo *)arg_hostInfo completion:(void (^)(FlutterError *_Nullable))completion {
-  NSString *channelName = [NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.ManiAuthApi.sendHostInfo", _messageChannelSuffix];
+- (void)sendHostInfo:(HostInfo *)arg_hostInfo completion:(void (^)(FlutterError *_Nullable))completion {
+  NSString *channelName = [NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.ManiAuthApi.send", _messageChannelSuffix];
   FlutterBasicMessageChannel *channel =
     [FlutterBasicMessageChannel
       messageChannelWithName:channelName
@@ -209,16 +209,16 @@ void SetUpHostAppApiWithSuffix(id<FlutterBinaryMessenger> binaryMessenger, NSObj
   {
     FlutterBasicMessageChannel *channel =
       [[FlutterBasicMessageChannel alloc]
-        initWithName:[NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.HostAppApi.finishAuthWithToken", messageChannelSuffix]
+        initWithName:[NSString stringWithFormat:@"%@%@", @"dev.flutter.pigeon.mani_auth.HostAppApi.authSuccess", messageChannelSuffix]
         binaryMessenger:binaryMessenger
         codec:nullGetApiCodec()];
     if (api) {
-      NSCAssert([api respondsToSelector:@selector(finishAuthWithTokenToken:error:)], @"HostAppApi api (%@) doesn't respond to @selector(finishAuthWithTokenToken:error:)", api);
+      NSCAssert([api respondsToSelector:@selector(authSuccessToken:error:)], @"HostAppApi api (%@) doesn't respond to @selector(authSuccessToken:error:)", api);
       [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
         NSArray<id> *args = message;
         Token *arg_token = GetNullableObjectAtIndex(args, 0);
         FlutterError *error;
-        [api finishAuthWithTokenToken:arg_token error:&error];
+        [api authSuccessToken:arg_token error:&error];
         callback(wrapResult(nil, error));
       }];
     } else {
